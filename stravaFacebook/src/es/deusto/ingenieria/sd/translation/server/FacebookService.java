@@ -47,7 +47,7 @@ public class FacebookService extends Thread {
 		}
 	}
 
-	public String checkUsuarioFacebook(String msg) { 
+	public String checkUsuarioFacebook(String msg) { //			email@gmail.com#contrasenya
 		String translation = null;
 		
 		if (msg != null && !msg.trim().isEmpty()) {
