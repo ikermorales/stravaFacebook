@@ -5,14 +5,14 @@ import java.io.DataOutputStream;
 import java.net.Socket;
 import java.util.StringTokenizer;
 
-public class TranslationService extends Thread {
+public class FacebookService extends Thread {
 	private DataInputStream in;
 	private DataOutputStream out;
 	private Socket tcpSocket;
 
 	private static String DELIMITER = "#";
 	
-	public TranslationService(Socket socket) {
+	public FacebookService(Socket socket) {
 		try {
 			this.tcpSocket = socket;
 		    this.in = new DataInputStream(socket.getInputStream());
@@ -53,7 +53,7 @@ public class TranslationService extends Thread {
 				System.out.println("   - Starting translation of " + text + " from: " + langFrom + " to " + langTo);
 		
 				if (langFrom != null && langTo != null && text != null && !text.trim().isEmpty()) {
-					GoogleTranslator gt = new GoogleTranslator();
+					RegistrationFacebook gt = new RegistrationFacebook();
 					translation = gt.translate(langFrom, langTo, text);
 					System.out.println("   - Google Translator result: " + translation);
 				}

@@ -8,7 +8,7 @@ import java.net.URLEncoder;
 
 import org.json.JSONArray;
 
-public class GoogleTranslator {
+public class RegistrationFacebook {
 
 	public String translate(String langFrom, String langTo, String text) throws Exception {
 		String urlString = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=" + langFrom + 

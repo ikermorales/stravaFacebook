@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="." default="2.server" name="2.2_Translation_SocketServer">    
+<project basedir="." default="2.server" name="stravaFacebookServer">    
 	<property environment="env"/>
 	
 	<property name="source.dir" location="src"/>
@@ -21,7 +21,7 @@
     </target>
 
 	<target name="2.server" depends="1.build" description="Runs the Server">
-		<java classname="es.deusto.ingenieria.sd.translation.server.TranslationServer" classpathref="classpath" fork="true">
+		<java classname="es.deusto.ingenieria.sd.translation.server.FacebookServer" classpathref="classpath" fork="true">
 	 		<arg value="${server.port}"/> 
         </java>
     </target>
